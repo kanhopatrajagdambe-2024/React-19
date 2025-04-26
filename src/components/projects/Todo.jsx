@@ -34,7 +34,13 @@ export default function Todo() {
       return ()=>clearInterval(interval)
   }, [])
   const handleDelete = () =>{
-    console.log("record deleted")
+    setTaskList("")
+  }
+
+  const handleTodoList = (task) =>{
+   const updatedtask = taskList.filter(item => item !== task)
+   setTaskList(updatedtask)
+   console.log(updatedtask)
   }
   return (
     <>
@@ -58,7 +64,7 @@ export default function Todo() {
               Add Task
             </button>
           </div>
-          <button className="bg-danger">clear All </button>
+          <button className="bg-danger" onClick={handleDelete}>clear All </button>
         </form>
       </section>
       <div className="mt-3">
@@ -86,13 +92,14 @@ export default function Todo() {
                   <i
                     className="bi bi-trash  bg-primary"
                     role="button"
-                    onClick={handleDelete}
+                    onClick={()=>handleTodoList(task)}
                   ></i>
                 </li>
               );
             })}
           </ul>
         )}
+
       </div>
     </>
   );
