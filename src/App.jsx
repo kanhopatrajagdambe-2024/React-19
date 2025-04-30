@@ -7,13 +7,15 @@ import StateUpLifting from './components/Hooks/StateUpLifting'
 import DerivedStateExample from './components/Hooks/DerivedStateExample'
 import ReactIconExample from './components/Hooks/ReactIconExample'
 import Todo from './components/projects/Todo'
+import ControlledComp from './components/ControlledAndUncontrolledComponent/ControlledComp'
+import UncontrolledComponentExample from './components/ControlledAndUncontrolledComponent/UncontrolledComponentExample'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-   <Todo />
+   <UncontrolledComponentExample />
     </>
   ) 
 }
