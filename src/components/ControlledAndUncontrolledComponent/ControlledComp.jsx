@@ -7,8 +7,7 @@ export default function ControlledComp() {
         setInputValue(e.target.value)
     }
   return (
-    <div>
-        
+    <div>      
     <label className='form-label'>Your name is : </label><span>{inputvalue}</span>
     <input type="text" onChange={handleNameChange} className='form-control' />
     </div>

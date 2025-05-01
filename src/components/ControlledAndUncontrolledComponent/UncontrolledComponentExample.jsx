@@ -6,7 +6,6 @@ export default function UncontrolledComponentExample() {
     e.preventDefault();
     const inputvalue = document.querySelector("#name")
     console.log(inputvalue.value)
-
    }
   return (
     <div>
