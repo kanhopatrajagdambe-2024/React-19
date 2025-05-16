@@ -27,9 +27,14 @@ export default function FecthApiUsingAsyncAwait() {
          }
     }
 
+    // useEffect(()=>{
+    //     FetchApi()
+    // }, [])
+
     useEffect(()=>{
-        FetchApi()
-    }, [])
+      FetchApi()
+  })
+
 
     if(loading){
         return (
